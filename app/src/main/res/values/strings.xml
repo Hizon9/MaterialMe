@@ -34,6 +34,20 @@
         <item>Tennis</item>
     </string-array>
 
+    <string-array name="sports_details">
+        <item>Baseball is fun!</item>
+        <item>Badminton is fun!</item>
+        <item>Basketball is fun!</item>
+        <item>Bowling is fun!</item>
+        <item>Cycling is fun!</item>
+        <item>Golf is fun!</item>
+        <item>Running is fun!</item>
+        <item>Soccer is fun!</item>
+        <item>Swimming is fun!</item>
+        <item>Table Tennis is fun!</item>
+        <item>Tennis is fun!</item>
+    </string-array>
+
     <string-array name="sports_info">
         <item>Here is some Baseball news!</item>
         <item>Here is some Badminton news!</item>

@@ -39,7 +39,6 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     // Member variables.
     private ArrayList<Sport> mSportsData;
     private Context mContext;
-    private ImageView mSportImage;
 
     /**
      * Constructor that passes in the sports data and the context.
@@ -103,6 +102,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
         // Member Variables for the TextViews
         private TextView mTitleText;
         private TextView mInfoText;
+        private ImageView mSportImage;
 
         /**
          * Constructor for the ViewHolder, used in onCreateViewHolder().
@@ -124,6 +124,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             // Populate the textviews with data.
             mTitleText.setText(currentSport.getTitle());
             mInfoText.setText(currentSport.getInfo());
+
             Glide.with(mContext).load(currentSport.getImageResource()).into(mSportImage);
 
         }
@@ -132,6 +133,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             Sport currentSport = mSportsData.get(getAdapterPosition());
             Intent detailIntent = new Intent(mContext, DetailActivity.class);
             detailIntent.putExtra("title", currentSport.getTitle());
+            detailIntent.putExtra("detail", currentSport.getDetail());
             detailIntent.putExtra("image_resource",
                     currentSport.getImageResource());
             mContext.startActivity(detailIntent);

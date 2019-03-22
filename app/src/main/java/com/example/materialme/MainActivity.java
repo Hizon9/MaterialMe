@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
                 .getStringArray(R.array.sports_titles);
         String[] sportsInfo = getResources()
                 .getStringArray(R.array.sports_info);
+        String[] sportsDetail = getResources()
+                .getStringArray(R.array.sports_details);
         TypedArray sportImageResources = getResources().obtainTypedArray(R.array.sports_images);
 
         // Clear the existing data (to avoid duplication).
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         // Create the ArrayList of Sports objects with titles and
         // information about each sport.
         for(int i=0;i<sportsList.length;i++){
-            mSportsData.add(new com.example.materialme.Sport(sportsList[i],sportsInfo[i],sportImageResources.getResourceId(i,0)));
+            mSportsData.add(new com.example.materialme.Sport(sportsList[i],sportsInfo[i],sportsDetail[i], sportImageResources.getResourceId(i,0)));
         }
 
         // Notify the adapter of the change.
